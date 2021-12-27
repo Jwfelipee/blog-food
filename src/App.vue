@@ -1,29 +1,14 @@
 <template>
-  <div class="container sm:max-w-sm mx-auto">
-    <Home />
-    <div class="flex pt-2 justify-start overflow-x-auto">
-      <CardPost />
-      <CardPost />
-    </div>
-   
-    <PopularBlog />
-    <div class="flex justify-start gap-3 overflow-x-auto">
-      <People />
-      <People />
-      <People />
-      <People />
-    </div>
+  <div id="nav">
+    <router-link to="/">Home</router-link> |
+    <router-link to="/login">Login</router-link>
   </div>
+  <router-view></router-view>
 </template>
 
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import Home from "./components/Home.vue";
-import CardPost from "./components/CardPost.vue";
-import People from "./components/People.vue";
-import ButtonCircle from "./components/ButtonCircle.vue";
-import PopularBlog from "./components/PopularBlog.vue";
+import routes from './router'
+const data = routes
 </script>
 
 <style>
