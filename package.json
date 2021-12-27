@@ -1,6 +1,6 @@
 {
-  "name": "template-vue",
-  "version": "0.0.0",
+  "name": "blog-food",
+  "version": "1.0.0",
   "scripts": {
     "build": "vue-tsc --noEmit && vite build",
     "dev": "vite",
