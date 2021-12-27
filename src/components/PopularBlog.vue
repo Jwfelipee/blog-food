@@ -3,7 +3,7 @@
     class="border-b-2 rounded-bl-3xl shadow-xl mt-5 mb-6 h-auto flex flex-col justify-center items-center"
   >
     <div class="w-full flex justify-between items-center">
-      <h1 class="w-full text-lg font-semibold align-text-bottom">
+      <h1 class="w-full m-3 text-lg font-semibold align-text-bottom">
         Populares Bolg
       </h1>
       <ButtonCircle class="m-5 -mb-2 z-10" />
