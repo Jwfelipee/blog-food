@@ -2,15 +2,10 @@
   <div class="w-full flex flex-col items-start pl-5">
     <div class="flex">
       <div class="flex flex-row-reverse">
+        <img @click="curtir" :src="heart" class="-ml-8 -mt-28 cursor-pointer z-10" />
         <img
           class="w-52 h-40 rounded-xl shadow-lg"
           :src="BoloDePoteDeMorango"
-        />
-
-        <img
-          @click="curtir"
-          :src="heart"
-          class="absolute -ml-3 mt-3 cursor-pointer"
         />
       </div>
     </div>
@@ -22,14 +17,12 @@
       <p class="font-light text-black">{{ name }}</p>
     </div>
   </div>
-  
 </template>
 
 <script setup lang="ts">
 import BoloDePoteDeMorango from "../assets/morango-pote.png";
 import Luciana from "../assets/luciana.png";
 import heart from "../assets/icons/heart.svg";
-
 
 const name: string = "Luciana Valadares";
 

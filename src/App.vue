@@ -1,13 +1,13 @@
 <template>
-  <div class="max-w-sm">
+  <div class="container sm:max-w-sm mx-auto">
     <Home />
-    <div class="flex justify-start">
+    <div class="flex pt-2 justify-start overflow-x-auto">
       <CardPost />
       <CardPost />
     </div>
    
     <PopularBlog />
-    <div class="flex justify-start gap-3">
+    <div class="flex justify-start gap-3 overflow-x-auto">
       <People />
       <People />
       <People />
@@ -31,8 +31,5 @@ import PopularBlog from "./components/PopularBlog.vue";
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
