@@ -15,23 +15,20 @@
   </div>
 </template>
  <script setup lang="ts">
-import { computed, defineProps, ref } from "vue";
+import { ref } from "vue";
 
 const { placeholder, label, state, type } = defineProps({
   label: {
     type: String,
     required: true,
-    default: "",
   },
   placeholder: {
     type: String,
     required: true,
-    default: "",
   },
   state: {
     type: Object,
     required: true,
-    default: "",
   },
   type: {
     type: String,

@@ -6,26 +6,35 @@
     <InputText
       :state="state"
       type="text"
-      label="e-mail"
+      :label="Login['email']"
       placeholder="marcelo@gmail.com.br"
     />
-    <InputText :state="state" type="password" label="senha" placeholder="**************" />
+    <InputText
+      :state="state"
+      type="password"
+      :label="Login['password']"
+      placeholder="**************"
+    />
+    <p v-show="state.error" class="text-sm text-center m-3 -mt-2 text-red-500">
+      Sua senha está incorreta. Por favor tente novamente
+    </p>
     <Button @click="submit" class="bg-green-limon-full">Entrar</Button>
   </div>
 </template>
 
 <script setup>
+import { reactive } from "@vue/reactivity";
 import Button from "../components/Button.vue";
 import InputText from "../components/InputText.vue";
+import { Login } from "../constants/login-contants";
 
-let state = {
- ['e-mail']: "",
-  senha: "",
-};
+const state = reactive({});
 
-function submit() {
+const submit = () => {
+  if (!state["e-mail"] || !state["password"]) return (state.error = true);
+  state.error = false;
   console.log(state);
-}
+};
 </script>
 
 <style scoped>
